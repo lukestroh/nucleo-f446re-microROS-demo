@@ -76,9 +76,9 @@ const osThreadAttr_t microROS_attributes = {
 
 /* Private function prototypes -----------------------------------------------*/
 /* USER CODE BEGIN FunctionPrototypes */
-bool cubemx_transport_open(struct uxrCustomTransport * transport);
-bool cubemx_transport_close(struct uxrCustomTransport * transport);
-size_t cubemx_transport_write(struct uxrCustomTransport* transport, const uint8_t * buf, size_t len, uint8_t * err);
+bool cubemx_transport_open(struct uxrCustomTransport* transport);
+bool cubemx_transport_close(struct uxrCustomTransport* transport);
+size_t cubemx_transport_write(struct uxrCustomTransport* transport, const uint8_t* buf, size_t len, uint8_t * err);
 size_t cubemx_transport_read(struct uxrCustomTransport* transport, uint8_t* buf, size_t len, int timeout, uint8_t* err);
 
 void * microros_allocate(size_t size, void * state);
@@ -152,7 +152,8 @@ void StartMicroROS(void *argument)
     cubemx_transport_open,
     cubemx_transport_close,
     cubemx_transport_write,
-    cubemx_transport_read);
+    cubemx_transport_read
+  );
 
   rcl_allocator_t freeRTOS_allocator = rcutils_get_zero_initialized_allocator();
   freeRTOS_allocator.allocate = microros_allocate;

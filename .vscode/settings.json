@@ -1,6 +1,7 @@
 {
     "files.associations": {
         "rcl.h": "c",
-        "freertos.h": "c"
+        "freertos.h": "c",
+        "main.h": "c"
     }
 }
