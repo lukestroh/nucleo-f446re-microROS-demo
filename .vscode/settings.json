@@ -2,6 +2,15 @@
     "files.associations": {
         "rcl.h": "c",
         "freertos.h": "c",
-        "main.h": "c"
+        "main.h": "c",
+        "init.h": "c",
+        "allocator.h": "c",
+        "macros.h": "c",
+        "visibility_control.h": "c",
+        "init_options.h": "c",
+        "context.h": "c",
+        "rmw_microros.h": "c",
+        "custom_transport.h": "c",
+        "transport.h": "c"
     }
 }
